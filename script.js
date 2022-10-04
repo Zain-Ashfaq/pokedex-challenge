@@ -1,15 +1,9 @@
 import { pokemonArray } from "./data/pokemon.js";
-const body = document.body;
-const div = document.createElement("div");
-div.innerText = "Hello world";
-body.append(div);
 
 const pokemonDataArray = pokemonArray;
-const main = document.body.main;
 
 const cardContainer = document.querySelector(".card-container");
-const h1 = document.createElement("div");
-
+console.log(cardContainer);
 const showPokemon = () => {
   let pokemonCards = "";
   for (let key in pokemonArray) {
@@ -19,15 +13,24 @@ const showPokemon = () => {
     let image = document.createElement("img");
     image.src = pokemonImage;
 
-    // let card = cardContainer;
+    let card = cardContainer;
+    let h1 = document.createElement("h1");
+    // card.appendChild(h1);
+    h1.innerText = individualPokemnon[0];
+    card.append(h1);
+
+    //  card.appendChild("<h1>");
 
     // let card = "<div>";
-    let card = "<div>";
+    // card.append(` Number: ${individualPokemnon[0]}`);
+    // card.append(` Name: ${individualPokemnon[1]}`);
+    // card.append(` Type(s): ${individualPokemnon[2]}`);
+    // card.append(` Image: ${individualPokemnon[3]}`);
 
-    card += `<h1>Number: ${individualPokemnon[0]}</h1>`;
-    card += `<h1>Name: ${individualPokemnon[1]}</h1>`;
-    card += `<h1>Type: ${individualPokemnon[2]}</h1>`;
-    card += `image is ${image.src}`;
+    // card += `<h1>Number: ${individualPokemnon[0]}</h1>`;
+    // card += `<h1>Name: ${individualPokemnon[1]}</h1>`;
+    // card += `<h1>Type: ${individualPokemnon[2]}</h1>`;
+    // card += `image is ${image.src}`;
     pokemonCards += card;
     // console.log(individualPokemnon);
 
