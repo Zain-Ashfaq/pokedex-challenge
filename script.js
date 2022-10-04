@@ -8,16 +8,22 @@ const showPokemon = () => {
   let pokemonCards = "";
   for (let key in pokemonArray) {
     let individualPokemnon = Object.values(pokemonDataArray[key]);
-    let pokemonImage = individualPokemnon[3];
-
-    let image = document.createElement("img");
-    image.src = pokemonImage;
 
     let card = cardContainer;
     let h1 = document.createElement("h1");
+    let h2 = document.createElement("h2");
+    let p = document.createElement("p");
+    let image = document.createElement("image");
     // card.appendChild(h1);
-    h1.innerText = individualPokemnon[0];
+    h2.innerText = `Number: ${individualPokemnon[0]}`;
+
+    h1.innerText = `Name: ${individualPokemnon[1]}`;
+    p.innerText = `Type(s): ${individualPokemnon[2]}`;
+    image.innerHTML = `Image: ${individualPokemnon[3]}`;
     card.append(h1);
+    card.append(h2);
+    card.append(p);
+    card.append(image);
 
     //  card.appendChild("<h1>");
 
